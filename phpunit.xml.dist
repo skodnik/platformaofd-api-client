@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         testdox="true"
+         cacheResultFile="./var/cache/"
+>
+    <testsuites>
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="DEBUG" value="false"/>
+        <env name="TOKEN" value=""/>
+        <env name="RNM" value=""/>
+        <env name="KKT_FN_SN" value=""/>
+        <env name="DATE_FROM" value="2023-05-08 14:00:00"/>
+        <env name="DATE_TO" value="2023-05-08 23:59:59"/>
+    </php>
+</phpunit>

@@ -1,0 +1,11 @@
+vendor
+composer.lock
+
+# php-cs-fixer
+.php-cs-fixer.php
+.php_cs.cache
+.php-cs-fixer.cache
+
+# PHPUnit
+phpunit.xml
+.phpunit.result.cache
