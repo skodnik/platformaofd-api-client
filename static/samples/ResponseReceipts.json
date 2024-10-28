@@ -1,0 +1,126 @@
+{
+  "receipts": [
+    {
+      "user": "ООО \"БЛЕСК\"",
+      "userInn": "3906972339",
+      "rqId": 8473465535,
+      "rqDate": "2018.04.01 12:37:13.000",
+      "kktName": "Касса 1",
+      "kktRegId": "0000316316055787",
+      "shiftNumber": 282,
+      "fiscalDriveNumber": "8710000100088709",
+      "fiscalDocumentNumber": 10244,
+      "fiscalSign": 621574523,
+      "receiptDate": "2018.04.01 11:36:00.000",
+      "receiptCode": 3,
+      "cashTotalSum": 18000,
+      "ecashTotalSum": 0,
+      "operator": "Кассир Иванова Ольга Владимировна",
+      "totalSum": 18000,
+      "requestNumber": 4,
+      "items": [
+        {
+          "name": "дюраселл лр6",
+          "price": 4500,
+          "quantity": 4,
+          "ndsNo": 18000,
+          "nds10": 0,
+          "nds18": 0,
+          "ndsCalculated10": 0,
+          "ndsCalculated18": 0,
+          "nds_1199": 5,
+          "sum": 18000,
+          "productType": 4,
+          "paymentType": 4,
+          "propData": "00000037850200000"
+        }
+      ],
+      "operationType": 1,
+      "taxationType": 4,
+      "retailPlace": "Гастроном № 40",
+      "retailPlaceAddress": "121099, Москва г, Смоленская пл, 1",
+      "buyerAddress": "buyer1@yandex.ru",
+      "senderAddress": "support@gastronom40.ru",
+      "ndsNo": 18000,
+      "prepaidSum": 0,
+      "provisionSum": 0,
+      "creditSum": 0,
+      "propertiesData": "3227021759",
+      "properties": [
+        {
+          "key": "Номер заказа",
+          "value": "156"
+        }
+      ],
+      "documentLink": "https://lk.platformaofd.ru/web/noauth/cheque/id?"
+    },
+    {
+      "user": "ООО \"БЛЕСК\"",
+      "userInn": "3906972339",
+      "rqId": 8496038877,
+      "rqDate": "2018.04.01 18:41:32.000",
+      "kktName": "Касса 1",
+      "kktRegId": "0000316316055787",
+      "shiftNumber": 282,
+      "fiscalDriveNumber": "8710000100088709",
+      "fiscalDocumentNumber": 10254,
+      "fiscalSign": 3712568730,
+      "receiptDate": "2018.04.01 17:40:00.000",
+      "receiptCode": 3,
+      "cashTotalSum": 25500,
+      "ecashTotalSum": 0,
+      "operator": "Кассир Иванова Ольга Владимировна",
+      "totalSum": 25500,
+      "requestNumber": 14,
+      "items": [
+        {
+          "name": "Воллар блеск для губ Элеганс",
+          "quantity": 1,
+          "barcode": "0000000000000000",
+          "price": 13500,
+          "ndsNo": 13500,
+          "nds10": 0,
+          "nds18": 0,
+          "ndsCalculated10": 0,
+          "ndsCalculated18": 0,
+          "nds_1199": 5,
+          "sum": 13500,
+          "productType": 4,
+          "paymentType": 4
+        },
+        {
+          "name": "помада-карандаш",
+          "price": 12000,
+          "quantity": 1,
+          "ndsNo": 12000,
+          "nds10": 0,
+          "nds18": 0,
+          "ndsCalculated10": 0,
+          "ndsCalculated18": 0,
+          "nds_1199": 5,
+          "sum": 12000,
+          "productType": 4,
+          "paymentType": 4
+        }
+      ],
+      "operationType": 1,
+      "taxationType": 4,
+      "retailPlace": "Гастроном № 40",
+      "retailPlaceAddress": "121099, Москва г, Смоленская пл, 1",
+      "buyerAddress": "buyer2@mail.ru",
+      "senderAddress": "support@gastronom40.ru",
+      "ndsNo": 25500,
+      "prepaidSum": 0,
+      "provisionSum": 0,
+      "creditSum": 0,
+      "propertiesData": "2336115606",
+      "properties": [
+        {
+          "value": "222445230",
+          "key": "Номер заказа"
+        }
+      ],
+      "documentLink": "https://lk.platformaofd.ru/web/noauth/cheque/id?"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{"exception": "503-01",
+  "exception text": "One or more receipts in processing yet",
+  "description": "At least one document (receipt) from the specified date period has not been fully processed yet. Retry the same request after the time specified in the 'Retry-After' HTTP header."
+}

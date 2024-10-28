@@ -1,0 +1,102 @@
+{
+    "branchName": "Главный узел",
+    "branchId": 1,
+    "kkts": [
+        {
+            "kktName": "Касса Кафе бар",
+            "kktModel": "АТОЛ 77Ф",
+            "kktCheckStatus": 8,
+            "kktRegDate": "2017-01-11T13:42:26",
+            "kktFN": "8710000100528513",
+            "kktNumber": "00106700000012",
+            "kktRegNumber": "0000442671040636",
+            "kktCheckFNSDate": "2017-01-11T15:42:26",
+            "kktCheckState": "Success",
+            "kktStatus": 2,
+            "kktLastCheckStatusDate": "2021-06-18T07:54:06",
+            "retailAddress": "г. Москва, ул. Оранжевая, д.22 к.11",
+            "kktLastSubscriptionDateTill": "2023-01-12T00:00:00",
+            "kktCurrentSubscriptionDateTill": "2023-01-12T00:00:00",
+            "kktFnInstallDate": "2021-07-22T16:29:00",
+            "kktFnDateTill": "2022-11-04T16:29:00",
+            "kktFnDateTillForecast": "2022-11-04T16:29:00",
+            "kktFnSpaceUsed": 56
+        }
+    ],
+    "branches": [
+        {
+            "branchName": "Магазин1",
+            "branchId": 2,
+            "kkts": [
+                {
+                    "kktName": "Касса Кафе бар",
+                    "kktModel": "АТОЛ 77Ф",
+                    "kktCheckStatus": 8,
+                    "kktRegDate": "2017-01-11T13:42:26",
+                    "kktFN": "8710000100528153",
+                    "kktNumber": "00106800000012",
+                    "kktRegNumber": "0000442671040636",
+                    "kktCheckFNSDate": "2017-01-11T15:42:26",
+                    "kktCheckState": "Success",
+                    "kktStatus": 2,
+                    "kktLastCheckStatusDate": "2021-06-18T07:54:06",
+                    "retailAddress": "г. Москва, ул. Оранжевая, д.22 к.11",
+                    "kktLastSubscriptionDateTill": "2022-06-12T00:00:00",
+                    "kktCurrentSubscriptionDateTill": "2022-06-12T00:00:00",
+                    "kktFnInstallDate": "2021-03-10T16:27:00",
+                    "kktFnDateTill": "2022-06-23T16:27:00",
+                    "kktFnDateTillForecast": "2022-06-23T16:27:00",
+                    "kktFnSpaceUsed": 24
+                }
+            ]
+        },
+        {
+            "branchName": "Магазин2",
+            "branchId": 3,
+            "kkts": [
+                {
+                    "kktName": "Касса Кафе бар",
+                    "kktModel": "АТОЛ 77Ф",
+                    "kktCheckStatus": 8,
+                    "kktRegDate": "2017-01-11T13:42:26",
+                    "kktFN": "8710000100528153",
+                    "kktNumber": "00106800000012",
+                    "kktRegNumber": "0000442671040636",
+                    "kktCheckFNSDate": "2017-01-11T15:42:26",
+                    "kktCheckState": "Success",
+                    "kktStatus": 2,
+                    "kktLastCheckStatusDate": "2021-06-18T07:54:06",
+                    "retailAddress": "г. Москва, ул. Оранжевая, д.22 к.11"
+                }
+            ],
+            "branches": [
+                {
+                    "branchName": "Магазин2-1",
+                    "branchId": 4,
+                    "kkts": [
+                        {
+                            "kktName": "Касса Кафе бар",
+                            "kktModel": "АТОЛ 77Ф",
+                            "kktCheckStatus": 8,
+                            "kktRegDate": "2017-01-11T13:42:26",
+                            "kktFN": "8710000100528153",
+                            "kktNumber": "00106800000012",
+                            "kktRegNumber": "0000442671040636",
+                            "kktCheckFNSDate": "2017-01-11T15:42:26",
+                            "kktCheckState": "Success",
+                            "kktStatus": 2,
+                            "kktLastCheckStatusDate": "2021-06-18T07:54:06",
+                            "retailAddress": "г. Москва, ул. Оранжевая, д.22 к.11",
+                            "kktLastSubscriptionDateTill": "2022-06-12T00:00:00",
+                            "kktCurrentSubscriptionDateTill": "2022-06-12T00:00:00",
+                            "kktFnInstallDate": "2021-03-12T17:10:00",
+                            "kktFnDateTill": "2022-06-25T17:10:00",
+                            "kktFnDateTillForecast": "2022-06-25T17:10:00",
+                            "kktFnSpaceUsed": 29
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

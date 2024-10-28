@@ -1,0 +1,39 @@
+{
+  "receipts_found": 317,
+  "receipts_count": 317,
+  "receipts": [
+    {
+      "dateTime": 1663832760,
+      "provisionSum": 0,
+      "shiftNumber": 100,
+      "fiscalDriveNumber": "9960440302160723",
+      "operator": "Головина Ольга Анатольевна",
+      "rqId": 79344354967,
+      "requestNumber": 1,
+      "buyerAddress": "+79246861510",
+      "ecashTotalSum": 64900,
+      "fiscalDocumentNumber": 5314,
+      "documentLink": "https://lk.platformaofd.ru/web/noauth/cheque/id?",
+      "taxationType": 1,
+      "nds0": 64900,
+      "userInn": "7736322345",
+      "creditSum": 0,
+      "kktRegId": "0004082749011444",
+      "rqDate": "2022.09.22 01:46:28.000",
+      "cashTotalSum": 0,
+      "totalSum": 64900,
+      "retailPlaceAddress": "г Москва, ул Смоленская, 9",
+      "fiscalSign": 201967449,
+      "operationType": 1,
+      "prepaidSum": 0,
+      "retailPlace": "г Петропавловск-Камчатский, чуркина пер, д 12",
+      "user": "ООО \"ЛОГИСТИКА\"",
+      "properties": [
+        {
+          "value": "480228885",
+          "key": "Номер отправления"
+        }
+      ]
+    }
+  ]
+}
