@@ -24,7 +24,7 @@ PlatformaOFD Client API — программный интерфейс для п�
 ## Установка библиотеки
 
 ```bash
-composer require platformaofd/client-api
+composer require vlsv/platformaofd-api-client
 ```
 
 ## Работа с API
