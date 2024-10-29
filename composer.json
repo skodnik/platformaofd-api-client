@@ -1,6 +1,6 @@
 {
   "name": "vlsv/platformaofd-api-client",
-  "description": "PlatformaOFD Client API — программный интерфейс для получения данных о кассах пользователя и документами с данных касс,\nполученные оператором фискальных данных.",
+  "description": "Клиент для работы с PlatformaOFD Client API",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
