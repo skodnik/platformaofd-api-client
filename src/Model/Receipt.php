@@ -19,6 +19,7 @@ use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated18;
 use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated5;
 use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated7;
 use Platformaofd\ClientApi\Model\Trait\Nds\NdsNo;
+use Platformaofd\ClientApi\Model\Trait\Operator;
 use Platformaofd\ClientApi\Model\Trait\RqId;
 use Platformaofd\ClientApi\Model\Trait\ShiftNumber;
 use Platformaofd\ClientApi\Model\Trait\User\UserInn;
