@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Platformaofd\ClientApi\Model;
 
+use Platformaofd\ClientApi\Model\Trait\CashTotalSum;
 use Platformaofd\ClientApi\Model\Trait\Date\ReceiptDate;
 use Platformaofd\ClientApi\Model\Trait\Date\RqDate;
 use Platformaofd\ClientApi\Model\Trait\Modifiers;
@@ -24,7 +25,8 @@ use Platformaofd\ClientApi\Model\Trait\User\UserInn;
 
 class Receipt
 {
-    use Modifiers,
+    use CashTotalSum,
+        Modifiers,
         Nds0,
         Nds10,
         Nds1199,
@@ -57,8 +59,6 @@ class Receipt
     private string $fnsUrl;
 
     private int $receiptCode;
-
-    private int $cashTotalSum;
 
     private int $ecashTotalSum;
 
@@ -208,18 +208,6 @@ class Receipt
     public function setReceiptCode(int $receiptCode): self
     {
         $this->receiptCode = $receiptCode;
-
-        return $this;
-    }
-
-    public function getCashTotalSum(): int
-    {
-        return $this->cashTotalSum;
-    }
-
-    public function setCashTotalSum(int $cashTotalSum): self
-    {
-        $this->cashTotalSum = $cashTotalSum;
 
         return $this;
     }

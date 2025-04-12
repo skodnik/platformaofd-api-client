@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Platformaofd\ClientApi\Model;
 
+use Platformaofd\ClientApi\Model\Trait\CashTotalSum;
 use Platformaofd\ClientApi\Model\Trait\Date\ReqDocDate;
 use Platformaofd\ClientApi\Model\Trait\Date\RqDate;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds0;
@@ -23,7 +24,8 @@ use Platformaofd\ClientApi\Model\Trait\User\UserInn;
 
 class Document
 {
-    use Nds0,
+    use CashTotalSum,
+        Nds0,
         Nds10,
         Nds1199,
         Nds18,
@@ -65,8 +67,6 @@ class Document
     private string $kktRegId;
 
     private string $userName;
-
-    private int $cashTotalSum;
 
     private int $totalSum;
 
@@ -230,18 +230,6 @@ class Document
     public function setUserName(string $userName): self
     {
         $this->userName = $userName;
-
-        return $this;
-    }
-
-    public function getCashTotalSum(): int
-    {
-        return $this->cashTotalSum;
-    }
-
-    public function setCashTotalSum(int $cashTotalSum): self
-    {
-        $this->cashTotalSum = $cashTotalSum;
 
         return $this;
     }
