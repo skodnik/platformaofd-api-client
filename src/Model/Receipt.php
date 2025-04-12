@@ -4,14 +4,12 @@ declare(strict_types=1);
 
 namespace Platformaofd\ClientApi\Model;
 
-use DateTimeImmutable;
+use Platformaofd\ClientApi\Model\Trait\Date\ReceiptDate;
 use Platformaofd\ClientApi\Model\Trait\Date\RqDate;
-use Symfony\Component\Serializer\Annotation\Context;
-use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 
 class Receipt
 {
-    use RqDate;
+    use ReceiptDate, RqDate;
 
     private string $user;
 
@@ -34,9 +32,6 @@ class Receipt
     private int $fiscalSign;
 
     private string $fnsUrl;
-
-    #[Context([DateTimeNormalizer::FORMAT_KEY => 'Y.m.d H:i:s.v'])]
-    private DateTimeImmutable $receiptDate;
 
     private int $receiptCode;
 
@@ -230,18 +225,6 @@ class Receipt
     public function setFnsUrl(string $fnsUrl): self
     {
         $this->fnsUrl = $fnsUrl;
-
-        return $this;
-    }
-
-    public function getReceiptDate(): DateTimeImmutable
-    {
-        return $this->receiptDate;
-    }
-
-    public function setReceiptDate(DateTimeImmutable $receiptDate): self
-    {
-        $this->receiptDate = $receiptDate;
 
         return $this;
     }

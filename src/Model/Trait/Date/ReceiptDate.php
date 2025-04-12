@@ -8,19 +8,19 @@ use DateTimeImmutable;
 use Symfony\Component\Serializer\Annotation\Context;
 use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 
-trait ReqDocDate
+trait ReceiptDate
 {
     #[Context([DateTimeNormalizer::FORMAT_KEY => 'Y.m.d H:i:s.v'])]
-    private DateTimeImmutable $reqDocDate;
+    private DateTimeImmutable $receiptDate;
 
-    public function getReqDocDate(): DateTimeImmutable
+    public function getReceiptDate(): DateTimeImmutable
     {
-        return $this->reqDocDate;
+        return $this->receiptDate;
     }
 
-    public function setReqDocDate(string $reqDocDate): self
+    public function setReceiptDate(DateTimeImmutable $receiptDate): self
     {
-        $this->reqDocDate = DateTimeImmutable::createFromFormat('Y.m.d H:i:s.v', $reqDocDate);
+        $this->receiptDate = $receiptDate;
 
         return $this;
     }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Platformaofd\ClientApi\Model\Trait\Date;
 
 use DateTimeImmutable;

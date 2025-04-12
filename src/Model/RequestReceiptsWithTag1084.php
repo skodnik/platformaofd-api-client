@@ -5,14 +5,12 @@ declare(strict_types=1);
 namespace Platformaofd\ClientApi\Model;
 
 use Platformaofd\ClientApi\Interface\RequestBodyInterface;
-use Symfony\Component\Serializer\Annotation\Context;
+use Platformaofd\ClientApi\Model\Trait\Date\ReceiptDateYmd;
 use Symfony\Component\Serializer\Annotation\SerializedName;
-use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 
 class RequestReceiptsWithTag1084 implements RequestBodyInterface
 {
-    #[Context([DateTimeNormalizer::FORMAT_KEY => 'Y-m-d'])]
-    private \DateTimeImmutable $receiptDate;
+    use ReceiptDateYmd;
 
     /**
      * @var string[]
@@ -24,21 +22,6 @@ class RequestReceiptsWithTag1084 implements RequestBodyInterface
      */
     #[SerializedName('properties_1084')]
     private array $properties1084;
-
-    public function getReceiptDate(): \DateTimeImmutable
-    {
-        return $this->receiptDate;
-    }
-
-    /**
-     * @throws \DateMalformedStringException
-     */
-    public function setReceiptDate(string $receiptDate): self
-    {
-        $this->receiptDate = new \DateTimeImmutable($receiptDate);
-
-        return $this;
-    }
 
     public function getKktRegIds(): array
     {
