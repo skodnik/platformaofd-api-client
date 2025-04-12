@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Platformaofd\ClientApi\Model;
 
+use DateTimeImmutable;
 use Symfony\Component\Serializer\Annotation\Context;
 use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 
@@ -16,11 +17,13 @@ class Receipt
     private int $rqId;
 
     #[Context([DateTimeNormalizer::FORMAT_KEY => 'Y.m.d H:i:s.v'])]
-    private \DateTimeImmutable $rqDate;
+    private DateTimeImmutable $rqDate;
 
     private string $kktName;
 
     private string $kktRegId;
+
+    private array $modifiers;
 
     private int $shiftNumber;
 
@@ -30,8 +33,10 @@ class Receipt
 
     private int $fiscalSign;
 
+    private string $fnsUrl;
+
     #[Context([DateTimeNormalizer::FORMAT_KEY => 'Y.m.d H:i:s.v'])]
-    private \DateTimeImmutable $receiptDate;
+    private DateTimeImmutable $receiptDate;
 
     private int $receiptCode;
 
@@ -51,6 +56,8 @@ class Receipt
     private array $items;
 
     private int $operationType;
+
+    private array $stornoItems;
 
     private int $taxationType;
 
@@ -79,7 +86,7 @@ class Receipt
     /**
      * @var Property[]
      */
-    private array $properties;
+    private ?array $properties = null;
 
     private string $documentLink;
 
@@ -119,12 +126,12 @@ class Receipt
         return $this;
     }
 
-    public function getRqDate(): \DateTimeImmutable
+    public function getRqDate(): DateTimeImmutable
     {
         return $this->rqDate;
     }
 
-    public function setRqDate(\DateTimeImmutable $rqDate): self
+    public function setRqDate(DateTimeImmutable $rqDate): self
     {
         $this->rqDate = $rqDate;
 
@@ -151,6 +158,30 @@ class Receipt
     public function setKktRegId(string $kktRegId): self
     {
         $this->kktRegId = $kktRegId;
+
+        return $this;
+    }
+
+    public function getModifiers(): array
+    {
+        return $this->modifiers;
+    }
+
+    public function setModifiers(array $modifiers): self
+    {
+        $this->modifiers = $modifiers;
+
+        return $this;
+    }
+
+    public function getStornoItems(): array
+    {
+        return $this->stornoItems;
+    }
+
+    public function setStornoItems(array $stornoItems): self
+    {
+        $this->stornoItems = $stornoItems;
 
         return $this;
     }
@@ -203,12 +234,24 @@ class Receipt
         return $this;
     }
 
-    public function getReceiptDate(): \DateTimeImmutable
+    public function getFnsUrl(): string
+    {
+        return $this->fnsUrl;
+    }
+
+    public function setFnsUrl(string $fnsUrl): self
+    {
+        $this->fnsUrl = $fnsUrl;
+
+        return $this;
+    }
+
+    public function getReceiptDate(): DateTimeImmutable
     {
         return $this->receiptDate;
     }
 
-    public function setReceiptDate(\DateTimeImmutable $receiptDate): self
+    public function setReceiptDate(DateTimeImmutable $receiptDate): self
     {
         $this->receiptDate = $receiptDate;
 
@@ -455,7 +498,7 @@ class Receipt
         return $this;
     }
 
-    public function getProperties(): array
+    public function getProperties(): ?array
     {
         return $this->properties;
     }
