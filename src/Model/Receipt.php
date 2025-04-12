@@ -74,6 +74,9 @@ class Receipt
 
     private int $operationType;
 
+    /**
+     * @deprecated
+     */
     private array $stornoItems;
 
     private int $taxationType;
