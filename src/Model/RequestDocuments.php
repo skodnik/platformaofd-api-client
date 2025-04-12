@@ -12,8 +12,11 @@ use Platformaofd\ClientApi\Interface\RequestQueryParamsInterface;
 class RequestDocuments implements RequestPathVarInterface, RequestQueryParamsInterface
 {
     private string $rnm;
+
     private DateTimeImmutable $dateFrom;
+
     private DateTimeImmutable $dateTo;
+
     private array $queryParams = [];
 
     public function getRnm(): string

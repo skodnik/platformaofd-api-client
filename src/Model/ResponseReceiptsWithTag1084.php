@@ -16,7 +16,7 @@ class ResponseReceiptsWithTag1084 implements ResponseInterface
     private int $receiptsCount;
 
     /**
-     * @var Receipt[] $receipts
+     * @var Receipt[]
      */
     private array $receipts;
 

@@ -19,7 +19,7 @@ class ReceiptsTest extends TestCaseBase
      */
     public function test_GetReceipts(): void
     {
-        $requestReceipts = (new RequestReceipts())
+        $requestReceipts = (new RequestReceipts)
             ->setKktRegId(getenv('RNM'))
             ->setKktFnSn(getenv('KKT_FN_SN'))
             ->setDateFrom(new DateTimeImmutable(getenv('DATE_FROM')))

@@ -9,7 +9,7 @@ use Platformaofd\ClientApi\Interface\ResponseInterface;
 class ResponseDocuments implements ResponseInterface
 {
     /**
-     * @var Document[] $documents
+     * @var Document[]
      */
     private array $documents;
 

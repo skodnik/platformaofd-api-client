@@ -7,13 +7,13 @@ namespace Platformaofd\ClientApi;
 class ClientConfig
 {
     private static string $dateTimeQueryParamsFormat = 'Y-m-d H:i:s';
+
     public function __construct(
         protected string $token,
         protected string $host = 'https://ofv-api-v0-1-1.evotor.ru',
         protected string $path = '/v1/client',
         protected bool $debug = false,
-    ) {
-    }
+    ) {}
 
     public function getToken(): string
     {

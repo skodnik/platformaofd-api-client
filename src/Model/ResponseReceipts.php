@@ -9,7 +9,7 @@ use Platformaofd\ClientApi\Interface\ResponseInterface;
 class ResponseReceipts implements ResponseInterface
 {
     /**
-     * @var Receipt[] $receipts
+     * @var Receipt[]
      */
     private array $receipts;
 

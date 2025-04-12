@@ -7,6 +7,7 @@ namespace Platformaofd\ClientApi\Model;
 class Property
 {
     private string $value;
+
     private string $key;
 
     public function getValue(): string

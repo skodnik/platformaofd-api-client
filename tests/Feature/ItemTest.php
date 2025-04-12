@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Feature;
 
-use Platformaofd\ClientApi\Model\Branch;
 use Platformaofd\ClientApi\Model\Item;
 use Platformaofd\ClientApi\Tests\TestCaseBase;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;

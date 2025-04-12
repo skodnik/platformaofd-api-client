@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace Platformaofd\ClientApi\Model;
 
-use Symfony\Component\Serializer\Annotation\SerializedName;
-
 class KktList
 {
     private string $orgInn;
+
     private string $orgKpp;
+
     private string $orgName;
 
     /**
-     * @var Branch[] $orgBranches
+     * @var Branch[]
      */
     private array $orgBranches;
 

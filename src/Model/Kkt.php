@@ -4,27 +4,42 @@ declare(strict_types=1);
 
 namespace Platformaofd\ClientApi\Model;
 
-use Symfony\Component\Serializer\Annotation\SerializedName;
-
 class Kkt
 {
     private string $kktName;
+
     private string $kktModel;
+
     private int $kktCheckStatus;
+
     private \DateTimeImmutable $kktRegDate;
+
     private string $kktFN;
+
     private string $kktNumber;
+
     private string $kktRegNumber;
+
     private \DateTimeImmutable $kktCheckFNSDate;
+
     private string $kktCheckState;
+
     private int $kktStatus;
+
     private \DateTimeImmutable $kktLastCheckStatusDate;
+
     private string $retailAddress;
+
     private \DateTimeImmutable $kktLastSubscriptionDateTill;
+
     private \DateTimeImmutable $kktCurrentSubscriptionDateTill;
+
     private \DateTimeImmutable $kktFnInstallDate;
+
     private \DateTimeImmutable $kktFnDateTill;
+
     private \DateTimeImmutable $kktFnDateTillForecast;
+
     private int $kktFnSpaceUsed;
 
     public function getKktName(): string

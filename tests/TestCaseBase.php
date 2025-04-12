@@ -12,7 +12,9 @@ use Symfony\Component\Serializer\Serializer;
 class TestCaseBase extends TestCase
 {
     protected Serializer $serializer;
+
     protected string $samplesDirPath = __DIR__ . '/../static/samples';
+
     protected PlatformaOFDClientAPI $apiClient;
 
     public function __construct(?string $name = null)
@@ -23,7 +25,7 @@ class TestCaseBase extends TestCase
 
         $config = new ClientConfig(
             token: getenv('TOKEN'),
-            debug: (bool)getenv('DEBUG'),
+            debug: (bool) getenv('DEBUG'),
         );
 
         $this->apiClient = new PlatformaOFDClientAPI(
@@ -32,7 +34,7 @@ class TestCaseBase extends TestCase
         );
 
         if ($config->debug()) {
-            $this->apiClient->attach(new DebugObserver());
+            $this->apiClient->attach(new DebugObserver);
         }
     }
 }

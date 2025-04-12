@@ -9,19 +9,32 @@ use Symfony\Component\Serializer\Attribute\SerializedName;
 class Item
 {
     private string $name;
+
     private int $quantity;
+
     private string $barcode;
+
     private int $price;
+
     private int $ndsNo;
+
     private int $nds10;
+
     private int $nds18;
+
     private int $ndsCalculated10;
+
     private int $ndsCalculated18;
+
     #[SerializedName('nds_1199')]
     private int $nds1199;
+
     private int $sum;
+
     private int $productType;
+
     private int $paymentType;
+
     private string $propData;
 
     public function getName(): string
@@ -191,5 +204,4 @@ class Item
 
         return $this;
     }
-
 }

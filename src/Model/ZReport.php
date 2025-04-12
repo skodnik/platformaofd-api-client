@@ -10,45 +10,79 @@ use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 class ZReport
 {
     private int $expenseCount;
+
     private int $refundExpenseSumm;
+
     private int $shiftNumber;
+
     private int $expensePrepaidSumm;
+
     private string $kktFN;
+
     private int $refundIncomeSumm;
+
     private int $incomeProvisionSumm;
+
     private int $refundExpenseCount;
+
     private int $refundExpensePrepaidSumm;
+
     private int $refundIncomeCashSumm;
+
     private int $expenseElectroSumm;
+
     private string $documentLink;
+
     private int $incomePrepaidSumm;
+
     private int $refundExpenseProvisionSumm;
+
     private int $incomeCreditSumm;
+
     private int $expenseProvisionSumm;
+
     private int $incomeCount;
+
     private int $refundIncomeProvisionSumm;
+
     private int $refundIncomeCount;
+
     private int $branchId;
 
     #[Context([DateTimeNormalizer::FORMAT_KEY => 'Y-m-d H:i:s.v'])]
     private \DateTimeImmutable $shiftOpenDate;
+
     private int $refundIncomeElectroSumm;
+
     private int $refundExpenseCreditSumm;
+
     private int $incomeElectoSumm;
+
     private string $kktName;
+
     private int $refundIncomePrepaidSumm;
+
     private int $expenseSumm;
 
     #[Context([DateTimeNormalizer::FORMAT_KEY => 'Y-m-d H:i:s.v'])]
     private \DateTimeImmutable $shiftCloseDate;
+
     private int $incomeSumm;
+
     private int $incomeCashSumm;
+
     private int $expenseCashSumm;
+
     private int $expenseCreditSumm;
+
     private string $kktNumber;
+
     private string $kktRegNumber;
+
     private int $refundIncomeCreditSumm;
+
     private int $refundExpenseCashSumm;
+
     private int $refundExpenseElectroSumm;
 
     public function getExpenseCount(): int

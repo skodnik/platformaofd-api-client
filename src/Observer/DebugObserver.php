@@ -22,12 +22,12 @@ class DebugObserver implements SplObserverExtendInterface
     public function update(
         SplSubject $subject,
         int $status = Status::INIT,
-        null|ApiEndpoint $apiEndpoint = null,
-        null|RequestInterfaceAlias $requestObject = null,
-        null|RequestInterface $request = null,
-        null|array $requestOptions = null,
+        ?ApiEndpoint $apiEndpoint = null,
+        ?RequestInterfaceAlias $requestObject = null,
+        ?RequestInterface $request = null,
+        ?array $requestOptions = null,
         null|string|ResponseInterface $response = null,
-        null|int $duration = null,
+        ?int $duration = null,
     ): void {
         $tmpPath = './var/tmp/' . date('Y-m-d_H:i:s') . '_';
         $requestClassName = explode('\\', get_class($requestObject));

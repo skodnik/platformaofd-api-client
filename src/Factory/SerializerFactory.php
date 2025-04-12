@@ -21,20 +21,20 @@ class SerializerFactory
 {
     public static function getSerializer(string $dateTimeFormat = 'Y-m-d\TH:i:s'): Serializer
     {
-        $classMetadataFactory = new ClassMetadataFactory(new AttributeLoader());
+        $classMetadataFactory = new ClassMetadataFactory(new AttributeLoader);
         $metadataAwareNameConverter = new MetadataAwareNameConverter($classMetadataFactory);
 
         $normalizers = [
-            new BackedEnumNormalizer(),
-            new ArrayDenormalizer(),
+            new BackedEnumNormalizer,
+            new ArrayDenormalizer,
             new DateTimeNormalizer([DateTimeNormalizer::FORMAT_KEY => $dateTimeFormat]),
             new ObjectNormalizer(
                 classMetadataFactory: $classMetadataFactory,
                 nameConverter: $metadataAwareNameConverter,
                 propertyTypeExtractor: new PropertyInfoExtractor(
                     typeExtractors: [
-                        new PhpDocExtractor(),
-                        new ReflectionExtractor(),
+                        new PhpDocExtractor,
+                        new ReflectionExtractor,
                     ]
                 ),
             ),

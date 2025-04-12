@@ -19,7 +19,7 @@ class KktsTest extends TestCaseBase
             /** @var ResponseKktList $responseKktList */
             $responseKktList = $this->apiClient->sendRequest(
                 apiEndpoint: ApiEndpoint::KKTS,
-                requestObject: (new RequestKktList())
+                requestObject: (new RequestKktList)
             );
         } catch (\Throwable $exception) {
             self::fail();

@@ -9,7 +9,9 @@ use Platformaofd\ClientApi\Interface\ResponseInterface;
 class ResponseExceptionReceipts implements ResponseInterface
 {
     private string $exception;
+
     private string $exceptionText;
+
     private string $description;
 
     public function getException(): string

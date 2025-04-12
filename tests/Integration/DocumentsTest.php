@@ -18,7 +18,7 @@ class DocumentsTest extends TestCaseBase
      */
     public function test_GetDocuments(): void
     {
-        $requestDocuments = (new RequestDocuments())
+        $requestDocuments = (new RequestDocuments)
             ->setRnm(getenv('RNM'))
             ->setDateFrom(new DateTimeImmutable(getenv('DATE_FROM')))
             ->setDateTo(new DateTimeImmutable(getenv('DATE_TO')));

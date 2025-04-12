@@ -11,12 +11,12 @@ class Branch
     private int $branchId;
 
     /**
-     * @var Kkt[] $kkts
+     * @var Kkt[]
      */
     private array $kkts;
 
     /**
-     * @var Branch[] $branches
+     * @var Branch[]
      */
     private array $branches;
 

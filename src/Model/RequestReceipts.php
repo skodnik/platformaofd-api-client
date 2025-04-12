@@ -11,15 +11,22 @@ use Platformaofd\ClientApi\Interface\RequestQueryParamsInterface;
 class RequestReceipts implements RequestQueryParamsInterface
 {
     private DateTimeImmutable $dateFrom;
-    private DateTimeImmutable $dateTo;
-    private int $dateType = 1;
-    private string $kktRegId;
-    private string $kktFnSn;
-    private string $properties1084;
-    private string $propData1191;
-    private string $propertiesData1192;
-    private array $queryParams = [];
 
+    private DateTimeImmutable $dateTo;
+
+    private int $dateType = 1;
+
+    private string $kktRegId;
+
+    private string $kktFnSn;
+
+    private string $properties1084;
+
+    private string $propData1191;
+
+    private string $propertiesData1192;
+
+    private array $queryParams = [];
 
     public function getQueryParams(): array
     {

@@ -10,51 +10,78 @@ use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 class Receipt
 {
     private string $user;
+
     private string $userInn;
+
     private int $rqId;
 
     #[Context([DateTimeNormalizer::FORMAT_KEY => 'Y.m.d H:i:s.v'])]
     private \DateTimeImmutable $rqDate;
+
     private string $kktName;
+
     private string $kktRegId;
+
     private int $shiftNumber;
+
     private string $fiscalDriveNumber;
+
     private int $fiscalDocumentNumber;
+
     private int $fiscalSign;
 
     #[Context([DateTimeNormalizer::FORMAT_KEY => 'Y.m.d H:i:s.v'])]
     private \DateTimeImmutable $receiptDate;
+
     private int $receiptCode;
+
     private int $cashTotalSum;
+
     private int $ecashTotalSum;
+
     private string $operator;
+
     private int $totalSum;
+
     private int $requestNumber;
 
     /**
-     * @var Item[] $items
+     * @var Item[]
      */
     private array $items;
+
     private int $operationType;
+
     private int $taxationType;
+
     private string $retailPlace;
+
     private string $retailPlaceAddress;
+
     private string $buyerAddress;
+
     private string $senderAddress;
+
     private int $ndsNo;
+
     private int $prepaidSum;
+
     private int $provisionSum;
+
     private int $creditSum;
+
     private ?int $dateTime;
+
     private ?int $nds0;
+
     private string $propertiesData;
 
     /**
-     * @var Property[] $properties
+     * @var Property[]
      */
     private array $properties;
-    private string $documentLink;
 
+    private string $documentLink;
 
     public function getUser(): string
     {

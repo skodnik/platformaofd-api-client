@@ -14,7 +14,6 @@ class ResponseReceiptsTest extends TestCaseBase
     {
         $json = file_get_contents($this->samplesDirPath . '/ResponseReceipts.json');
 
-
         $responseReceipts = $this->serializer->deserialize(
             data: $json,
             type: ResponseReceipts::class,

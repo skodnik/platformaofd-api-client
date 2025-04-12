@@ -27,17 +27,14 @@ use Throwable;
 
 class PlatformaOFDClientAPI implements SplSubject
 {
-    /**
-     * @var SplObjectStorage
-     */
     private SplObjectStorage $observers;
 
     public function __construct(
         protected ClientConfig $config,
         protected Serializer $serializer,
-        protected Client $client = new Client(),
+        protected Client $client = new Client,
     ) {
-        $this->observers = new SplObjectStorage();
+        $this->observers = new SplObjectStorage;
     }
 
     /**
@@ -81,7 +78,7 @@ class PlatformaOFDClientAPI implements SplSubject
             $response = $this->client->send($request, $requestOptions);
 
             $duration += hrtime(true);
-            $duration = (int)round($duration / 1e+6);
+            $duration = (int) round($duration / 1e+6);
 
             $this->notify(
                 status: Status::SUCCESS,
@@ -96,7 +93,7 @@ class PlatformaOFDClientAPI implements SplSubject
             $response->getBody()->rewind();
         } catch (GuzzleException $exception) {
             $duration += hrtime(true);
-            $duration = (int)round($duration / 1e+6);
+            $duration = (int) round($duration / 1e+6);
 
             try {
                 $responseBody = $exception->getResponse()?->getBody()->getContents();
@@ -123,7 +120,7 @@ class PlatformaOFDClientAPI implements SplSubject
 
         if ($response->getStatusCode() !== 200) {
             $duration += hrtime(true);
-            $duration = (int)round($duration / 1e+6);
+            $duration = (int) round($duration / 1e+6);
 
             $responseBody = $response->getBody()->getContents();
 
@@ -150,17 +147,11 @@ class PlatformaOFDClientAPI implements SplSubject
         );
     }
 
-    /**
-     * @param SplObserver $observer
-     */
     public function attach(SplObserver $observer): void
     {
         $this->observers->attach($observer);
     }
 
-    /**
-     * @param SplObserver $observer
-     */
     public function detach(SplObserver $observer): void
     {
         $this->observers->detach($observer);
@@ -168,12 +159,12 @@ class PlatformaOFDClientAPI implements SplSubject
 
     public function notify(
         int $status = Status::INIT,
-        null|ApiEndpoint $apiEndpoint = null,
-        null|RequestInterface $requestObject = null,
-        null|RequestInterfaceAlias $request = null,
-        null|array $requestOptions = null,
+        ?ApiEndpoint $apiEndpoint = null,
+        ?RequestInterface $requestObject = null,
+        ?RequestInterfaceAlias $request = null,
+        ?array $requestOptions = null,
         null|string|ResponseInterfaceAlias $response = null,
-        null|int $duration = null,
+        ?int $duration = null,
     ): void {
         /** @var SplObserverExtendInterface $observer */
         foreach ($this->observers as $observer) {

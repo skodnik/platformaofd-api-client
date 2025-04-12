@@ -11,7 +11,9 @@ use Platformaofd\ClientApi\Interface\RequestQueryParamsInterface;
 class RequestZReports implements RequestPathVarInterface, RequestQueryParamsInterface
 {
     private string $rnm;
+
     private \DateTimeImmutable $dateFrom;
+
     private \DateTimeImmutable $dateTo;
 
     public function getRnm(): string

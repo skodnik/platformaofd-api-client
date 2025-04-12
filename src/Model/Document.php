@@ -11,33 +11,55 @@ use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 class Document
 {
     private ?int $dateTime;
+
     private int $operationTypeId;
+
     private int $shiftNumber;
+
     private string $operator;
+
     private int $rqId;
+
     private int $taxationTypeId;
+
     private string $docTypeName;
+
     private int $requestNumber;
+
     private int $docTypeId;
+
     private string $docFp;
+
     private int $fiscalDocumentNumber;
+
     private string $documentLink;
+
     private string $taxationType;
+
     private int $ndsNo;
+
     private string $userInn;
+
     private string $kktRegId;
+
     private string $userName;
 
     #[Context([DateTimeNormalizer::FORMAT_KEY => 'Y.m.d H:i:s.v'])]
     private \DateTimeImmutable $rqDate;
+
     private int $cashTotalSum;
+
     private int $totalSum;
+
     private int $fnsGate;
+
     private string $fnSn;
+
     private int $fdFormatVer;
 
     #[Context([DateTimeNormalizer::FORMAT_KEY => 'Y.m.d H:i:s.v'])]
     private \DateTimeImmutable $reqDocDate;
+
     private string $operationType;
 
     public function getDateTime(): int

@@ -15,7 +15,7 @@ class RequestReceiptsWithTag1084 implements RequestBodyInterface
     private \DateTimeImmutable $receiptDate;
 
     /**
-     * @var string[] $kktRegIds
+     * @var string[]
      */
     private array $kktRegIds;
 

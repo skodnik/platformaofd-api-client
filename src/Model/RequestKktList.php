@@ -6,6 +6,4 @@ namespace Platformaofd\ClientApi\Model;
 
 use Platformaofd\ClientApi\Interface\RequestInterface;
 
-class RequestKktList implements RequestInterface
-{
-}
+class RequestKktList implements RequestInterface {}
