@@ -7,13 +7,14 @@ namespace Platformaofd\ClientApi\Model;
 use Platformaofd\ClientApi\Model\Trait\Kkt\KktFn;
 use Platformaofd\ClientApi\Model\Trait\Kkt\KktName;
 use Platformaofd\ClientApi\Model\Trait\Kkt\KktNumber;
+use Platformaofd\ClientApi\Model\Trait\Kkt\KktRegNumber;
 use Platformaofd\ClientApi\Model\Trait\ShiftNumber;
 use Symfony\Component\Serializer\Annotation\Context;
 use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 
 class ZReport
 {
-    use KktFn, KktName, KktNumber, ShiftNumber;
+    use KktFn, KktName, KktNumber, KktRegNumber, ShiftNumber;
 
     private int $expenseCount;
 
@@ -74,8 +75,6 @@ class ZReport
     private int $expenseCashSumm;
 
     private int $expenseCreditSumm;
-
-    private string $kktRegNumber;
 
     private int $refundIncomeCreditSumm;
 
@@ -427,18 +426,6 @@ class ZReport
     public function setExpenseCreditSumm(int $expenseCreditSumm): self
     {
         $this->expenseCreditSumm = $expenseCreditSumm;
-
-        return $this;
-    }
-
-    public function getKktRegNumber(): string
-    {
-        return $this->kktRegNumber;
-    }
-
-    public function setKktRegNumber(string $kktRegNumber): self
-    {
-        $this->kktRegNumber = $kktRegNumber;
 
         return $this;
     }
