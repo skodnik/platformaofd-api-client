@@ -6,18 +6,17 @@ namespace Platformaofd\ClientApi\Model;
 
 use Platformaofd\ClientApi\Model\Trait\Kkt\KktFn;
 use Platformaofd\ClientApi\Model\Trait\Kkt\KktName;
+use Platformaofd\ClientApi\Model\Trait\Kkt\KktNumber;
 
 class Kkt
 {
-    use KktFn, KktName;
+    use KktFn, KktName, KktNumber;
 
     private string $kktModel;
 
     private int $kktCheckStatus;
 
     private \DateTimeImmutable $kktRegDate;
-
-    private string $kktNumber;
 
     private string $kktRegNumber;
 
@@ -75,18 +74,6 @@ class Kkt
     public function setKktRegDate(\DateTimeImmutable $kktRegDate): self
     {
         $this->kktRegDate = $kktRegDate;
-
-        return $this;
-    }
-
-    public function getKktNumber(): string
-    {
-        return $this->kktNumber;
-    }
-
-    public function setKktNumber(string $kktNumber): self
-    {
-        $this->kktNumber = $kktNumber;
 
         return $this;
     }
