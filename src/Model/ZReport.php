@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace Platformaofd\ClientApi\Model;
 
+use Platformaofd\ClientApi\Model\Trait\Kkt\KktName;
 use Platformaofd\ClientApi\Model\Trait\ShiftNumber;
 use Symfony\Component\Serializer\Annotation\Context;
 use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 
 class ZReport
 {
-    use ShiftNumber;
+    use KktName, ShiftNumber;
 
     private int $expenseCount;
 
@@ -58,8 +59,6 @@ class ZReport
     private int $refundExpenseCreditSumm;
 
     private int $incomeElectoSumm;
-
-    private string $kktName;
 
     private int $refundIncomePrepaidSumm;
 
@@ -358,18 +357,6 @@ class ZReport
     public function setIncomeElectoSumm(int $incomeElectoSumm): self
     {
         $this->incomeElectoSumm = $incomeElectoSumm;
-
-        return $this;
-    }
-
-    public function getKktName(): string
-    {
-        return $this->kktName;
-    }
-
-    public function setKktName(string $kktName): self
-    {
-        $this->kktName = $kktName;
 
         return $this;
     }

@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Platformaofd\ClientApi\Model;
 
+use Platformaofd\ClientApi\Model\Trait\Kkt\KktName;
+
 class Kkt
 {
-    private string $kktName;
+    use KktName;
 
     private string $kktModel;
 
@@ -41,18 +43,6 @@ class Kkt
     private \DateTimeImmutable $kktFnDateTillForecast;
 
     private int $kktFnSpaceUsed;
-
-    public function getKktName(): string
-    {
-        return $this->kktName;
-    }
-
-    public function setKktName(string $kktName): self
-    {
-        $this->kktName = $kktName;
-
-        return $this;
-    }
 
     public function getKktModel(): string
     {

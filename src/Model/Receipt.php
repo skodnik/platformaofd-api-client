@@ -7,6 +7,7 @@ namespace Platformaofd\ClientApi\Model;
 use Platformaofd\ClientApi\Model\Trait\CashTotalSum;
 use Platformaofd\ClientApi\Model\Trait\Date\ReceiptDate;
 use Platformaofd\ClientApi\Model\Trait\Date\RqDate;
+use Platformaofd\ClientApi\Model\Trait\Kkt\KktName;
 use Platformaofd\ClientApi\Model\Trait\Modifiers;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds0;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds10;
@@ -27,6 +28,7 @@ use Platformaofd\ClientApi\Model\Trait\User\UserInn;
 class Receipt
 {
     use CashTotalSum,
+        KktName,
         Modifiers,
         Nds0,
         Nds10,
@@ -47,8 +49,6 @@ class Receipt
         UserInn;
 
     private string $user;
-
-    private string $kktName;
 
     private string $kktRegId;
 
@@ -115,18 +115,6 @@ class Receipt
     public function setUser(string $user): self
     {
         $this->user = $user;
-
-        return $this;
-    }
-
-    public function getKktName(): string
-    {
-        return $this->kktName;
-    }
-
-    public function setKktName(string $kktName): self
-    {
-        $this->kktName = $kktName;
 
         return $this;
     }
