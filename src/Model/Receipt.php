@@ -6,11 +6,35 @@ namespace Platformaofd\ClientApi\Model;
 
 use Platformaofd\ClientApi\Model\Trait\Date\ReceiptDate;
 use Platformaofd\ClientApi\Model\Trait\Date\RqDate;
+use Platformaofd\ClientApi\Model\Trait\Nds\Nds0;
+use Platformaofd\ClientApi\Model\Trait\Nds\Nds10;
+use Platformaofd\ClientApi\Model\Trait\Nds\Nds1199;
+use Platformaofd\ClientApi\Model\Trait\Nds\Nds18;
+use Platformaofd\ClientApi\Model\Trait\Nds\Nds5;
+use Platformaofd\ClientApi\Model\Trait\Nds\Nds7;
+use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated10;
+use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated18;
+use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated5;
+use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated7;
+use Platformaofd\ClientApi\Model\Trait\Nds\NdsNo;
 use Platformaofd\ClientApi\Model\Trait\User\UserInn;
 
 class Receipt
 {
-    use ReceiptDate, RqDate, UserInn;
+    use Nds0,
+        Nds10,
+        Nds1199,
+        Nds18,
+        Nds5,
+        Nds7,
+        NdsCalculated10,
+        NdsCalculated18,
+        NdsCalculated5,
+        NdsCalculated7,
+        NdsNo,
+        ReceiptDate,
+        RqDate,
+        UserInn;
 
     private string $user;
 
@@ -63,8 +87,6 @@ class Receipt
 
     private string $senderAddress;
 
-    private int $ndsNo;
-
     private int $prepaidSum;
 
     private int $provisionSum;
@@ -72,8 +94,6 @@ class Receipt
     private int $creditSum;
 
     private ?int $dateTime;
-
-    private ?int $nds0;
 
     private string $propertiesData;
 
@@ -372,18 +392,6 @@ class Receipt
         return $this;
     }
 
-    public function getNdsNo(): int
-    {
-        return $this->ndsNo;
-    }
-
-    public function setNdsNo(int $ndsNo): self
-    {
-        $this->ndsNo = $ndsNo;
-
-        return $this;
-    }
-
     public function getPrepaidSum(): int
     {
         return $this->prepaidSum;
@@ -428,18 +436,6 @@ class Receipt
     public function setDateTime(int $dateTime): self
     {
         $this->dateTime = $dateTime;
-
-        return $this;
-    }
-
-    public function getNds0(): int
-    {
-        return $this->nds0;
-    }
-
-    public function setNds0(int $nds0): self
-    {
-        $this->nds0 = $nds0;
 
         return $this;
     }
