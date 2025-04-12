@@ -7,6 +7,7 @@ namespace Platformaofd\ClientApi\Model;
 use Platformaofd\ClientApi\Model\Trait\CashTotalSum;
 use Platformaofd\ClientApi\Model\Trait\Date\ReqDocDate;
 use Platformaofd\ClientApi\Model\Trait\Date\RqDate;
+use Platformaofd\ClientApi\Model\Trait\Kkt\KktRegId;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds0;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds10;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds1199;
@@ -26,6 +27,7 @@ use Platformaofd\ClientApi\Model\Trait\User\UserInn;
 class Document
 {
     use CashTotalSum,
+        KktRegId,
         Nds0,
         Nds10,
         Nds1199,
@@ -63,8 +65,6 @@ class Document
     private string $documentLink;
 
     private string $taxationType;
-
-    private string $kktRegId;
 
     private string $userName;
 
@@ -194,18 +194,6 @@ class Document
     public function setTaxationType(string $taxationType): self
     {
         $this->taxationType = $taxationType;
-
-        return $this;
-    }
-
-    public function getKktRegId(): string
-    {
-        return $this->kktRegId;
-    }
-
-    public function setKktRegId(string $kktRegId): self
-    {
-        $this->kktRegId = $kktRegId;
 
         return $this;
     }

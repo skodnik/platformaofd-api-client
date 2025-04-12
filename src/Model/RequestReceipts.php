@@ -7,16 +7,17 @@ namespace Platformaofd\ClientApi\Model;
 use DateTimeImmutable;
 use Platformaofd\ClientApi\ClientConfig;
 use Platformaofd\ClientApi\Interface\RequestQueryParamsInterface;
+use Platformaofd\ClientApi\Model\Trait\Kkt\KktRegId;
 
 class RequestReceipts implements RequestQueryParamsInterface
 {
+    use KktRegId;
+
     private DateTimeImmutable $dateFrom;
 
     private DateTimeImmutable $dateTo;
 
     private int $dateType = 1;
-
-    private string $kktRegId;
 
     private string $kktFnSn;
 
@@ -70,11 +71,6 @@ class RequestReceipts implements RequestQueryParamsInterface
         $this->queryParams['dateType'] = $dateType;
 
         return $this;
-    }
-
-    public function getKktRegId(): string
-    {
-        return $this->kktRegId;
     }
 
     public function setKktRegId(string $kktRegId): self

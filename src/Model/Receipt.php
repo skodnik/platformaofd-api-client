@@ -8,6 +8,7 @@ use Platformaofd\ClientApi\Model\Trait\CashTotalSum;
 use Platformaofd\ClientApi\Model\Trait\Date\ReceiptDate;
 use Platformaofd\ClientApi\Model\Trait\Date\RqDate;
 use Platformaofd\ClientApi\Model\Trait\Kkt\KktName;
+use Platformaofd\ClientApi\Model\Trait\Kkt\KktRegId;
 use Platformaofd\ClientApi\Model\Trait\Modifiers;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds0;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds10;
@@ -29,6 +30,7 @@ class Receipt
 {
     use CashTotalSum,
         KktName,
+        KktRegId,
         Modifiers,
         Nds0,
         Nds10,
@@ -49,8 +51,6 @@ class Receipt
         UserInn;
 
     private string $user;
-
-    private string $kktRegId;
 
     private string $fiscalDriveNumber;
 
@@ -115,18 +115,6 @@ class Receipt
     public function setUser(string $user): self
     {
         $this->user = $user;
-
-        return $this;
-    }
-
-    public function getKktRegId(): string
-    {
-        return $this->kktRegId;
-    }
-
-    public function setKktRegId(string $kktRegId): self
-    {
-        $this->kktRegId = $kktRegId;
 
         return $this;
     }
