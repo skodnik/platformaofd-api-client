@@ -8,6 +8,8 @@ use Symfony\Component\Serializer\Attribute\SerializedName;
 
 class Item
 {
+    private array $modifiers;
+
     private string $name;
 
     private int $quantity;
@@ -18,9 +20,19 @@ class Item
 
     private int $ndsNo;
 
+    private int $nds0;
+
     private int $nds10;
 
     private int $nds18;
+
+    private int $nds5;
+
+    private int $nds7;
+
+    private int $ndsCalculated5;
+
+    private int $ndsCalculated7;
 
     private int $ndsCalculated10;
 
@@ -36,6 +48,18 @@ class Item
     private int $paymentType;
 
     private string $propData;
+
+    public function getModifiers(): array
+    {
+        return $this->modifiers;
+    }
+
+    public function setModifiers(array $modifiers): self
+    {
+        $this->modifiers = $modifiers;
+
+        return $this;
+    }
 
     public function getName(): string
     {
@@ -97,6 +121,18 @@ class Item
         return $this;
     }
 
+    public function getNds0(): int
+    {
+        return $this->nds0;
+    }
+
+    public function setNds0(int $nds0): self
+    {
+        $this->nds0 = $nds0;
+
+        return $this;
+    }
+
     public function getNds10(): int
     {
         return $this->nds10;
@@ -117,6 +153,54 @@ class Item
     public function setNds18(int $nds18): self
     {
         $this->nds18 = $nds18;
+
+        return $this;
+    }
+
+    public function getNds5(): int
+    {
+        return $this->nds5;
+    }
+
+    public function setNds5(int $nds5): self
+    {
+        $this->nds5 = $nds5;
+
+        return $this;
+    }
+
+    public function getNds7(): int
+    {
+        return $this->nds7;
+    }
+
+    public function setNds7(int $nds7): self
+    {
+        $this->nds7 = $nds7;
+
+        return $this;
+    }
+
+    public function getNdsCalculated5(): int
+    {
+        return $this->ndsCalculated5;
+    }
+
+    public function setNdsCalculated5(int $ndsCalculated5): self
+    {
+        $this->ndsCalculated5 = $ndsCalculated5;
+
+        return $this;
+    }
+
+    public function getNdsCalculated7(): int
+    {
+        return $this->ndsCalculated7;
+    }
+
+    public function setNdsCalculated7(int $ndsCalculated7): self
+    {
+        $this->ndsCalculated7 = $ndsCalculated7;
 
         return $this;
     }

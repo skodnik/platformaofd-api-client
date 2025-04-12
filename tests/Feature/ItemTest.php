@@ -4,15 +4,26 @@ declare(strict_types=1);
 
 namespace Feature;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use Platformaofd\ClientApi\Model\Item;
 use Platformaofd\ClientApi\Tests\TestCaseBase;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 
 class ItemTest extends TestCaseBase
 {
-    public function test_deserializeSerialize(): void
+    public static function itemNamesDataProvider(): array
     {
-        $json = file_get_contents($this->samplesDirPath . '/Item.json');
+        return [
+            ['Item_01.json'],
+            ['Item_02.json'],
+            ['Item_03.json'],
+        ];
+    }
+
+    #[dataProvider('itemNamesDataProvider')]
+    public function test_deserializeSerialize(string $itemName): void
+    {
+        $json = file_get_contents($this->samplesDirPath . '/' . $itemName);
 
         $item = $this->serializer->deserialize(
             data: $json,
