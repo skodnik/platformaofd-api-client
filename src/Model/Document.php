@@ -36,6 +36,7 @@ class Document
         NdsCalculated5,
         NdsCalculated7,
         NdsNo,
+        Operator,
         ReqDocDate,
         RqDate,
         RqId,
@@ -45,8 +46,6 @@ class Document
     private ?int $dateTime;
 
     private int $operationTypeId;
-
-    private string $operator;
 
     private int $taxationTypeId;
 
@@ -98,18 +97,6 @@ class Document
     public function setOperationTypeId(int $operationTypeId): self
     {
         $this->operationTypeId = $operationTypeId;
-
-        return $this;
-    }
-
-    public function getOperator(): string
-    {
-        return $this->operator;
-    }
-
-    public function setOperator(string $operator): self
-    {
-        $this->operator = $operator;
 
         return $this;
     }

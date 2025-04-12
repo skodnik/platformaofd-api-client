@@ -38,6 +38,7 @@ class Receipt
         NdsCalculated5,
         NdsCalculated7,
         NdsNo,
+        Operator,
         ReceiptDate,
         RqDate,
         RqId,
@@ -61,8 +62,6 @@ class Receipt
     private int $receiptCode;
 
     private int $ecashTotalSum;
-
-    private string $operator;
 
     private int $totalSum;
 
@@ -220,18 +219,6 @@ class Receipt
     public function setEcashTotalSum(int $ecashTotalSum): self
     {
         $this->ecashTotalSum = $ecashTotalSum;
-
-        return $this;
-    }
-
-    public function getOperator(): string
-    {
-        return $this->operator;
-    }
-
-    public function setOperator(string $operator): self
-    {
-        $this->operator = $operator;
 
         return $this;
     }
