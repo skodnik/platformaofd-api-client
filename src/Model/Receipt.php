@@ -19,6 +19,7 @@ use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated5;
 use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated7;
 use Platformaofd\ClientApi\Model\Trait\Nds\NdsNo;
 use Platformaofd\ClientApi\Model\Trait\RqId;
+use Platformaofd\ClientApi\Model\Trait\ShiftNumber;
 use Platformaofd\ClientApi\Model\Trait\User\UserInn;
 
 class Receipt
@@ -38,6 +39,7 @@ class Receipt
         ReceiptDate,
         RqDate,
         RqId,
+        ShiftNumber,
         UserInn;
 
     private string $user;
@@ -45,8 +47,6 @@ class Receipt
     private string $kktName;
 
     private string $kktRegId;
-
-    private int $shiftNumber;
 
     private string $fiscalDriveNumber;
 
@@ -148,18 +148,6 @@ class Receipt
     public function setStornoItems(array $stornoItems): self
     {
         $this->stornoItems = $stornoItems;
-
-        return $this;
-    }
-
-    public function getShiftNumber(): int
-    {
-        return $this->shiftNumber;
-    }
-
-    public function setShiftNumber(int $shiftNumber): self
-    {
-        $this->shiftNumber = $shiftNumber;
 
         return $this;
     }

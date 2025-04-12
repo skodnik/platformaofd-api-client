@@ -18,6 +18,7 @@ use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated5;
 use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated7;
 use Platformaofd\ClientApi\Model\Trait\Nds\NdsNo;
 use Platformaofd\ClientApi\Model\Trait\RqId;
+use Platformaofd\ClientApi\Model\Trait\ShiftNumber;
 use Platformaofd\ClientApi\Model\Trait\User\UserInn;
 
 class Document
@@ -36,13 +37,12 @@ class Document
         ReqDocDate,
         RqDate,
         RqId,
+        ShiftNumber,
         UserInn;
 
     private ?int $dateTime;
 
     private int $operationTypeId;
-
-    private int $shiftNumber;
 
     private string $operator;
 
@@ -98,18 +98,6 @@ class Document
     public function setOperationTypeId(int $operationTypeId): self
     {
         $this->operationTypeId = $operationTypeId;
-
-        return $this;
-    }
-
-    public function getShiftNumber(): int
-    {
-        return $this->shiftNumber;
-    }
-
-    public function setShiftNumber(int $shiftNumber): self
-    {
-        $this->shiftNumber = $shiftNumber;
 
         return $this;
     }

@@ -4,16 +4,17 @@ declare(strict_types=1);
 
 namespace Platformaofd\ClientApi\Model;
 
+use Platformaofd\ClientApi\Model\Trait\ShiftNumber;
 use Symfony\Component\Serializer\Annotation\Context;
 use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 
 class ZReport
 {
+    use ShiftNumber;
+
     private int $expenseCount;
 
     private int $refundExpenseSumm;
-
-    private int $shiftNumber;
 
     private int $expensePrepaidSumm;
 
@@ -105,18 +106,6 @@ class ZReport
     public function setRefundExpenseSumm(int $refundExpenseSumm): self
     {
         $this->refundExpenseSumm = $refundExpenseSumm;
-
-        return $this;
-    }
-
-    public function getShiftNumber(): int
-    {
-        return $this->shiftNumber;
-    }
-
-    public function setShiftNumber(int $shiftNumber): self
-    {
-        $this->shiftNumber = $shiftNumber;
 
         return $this;
     }
