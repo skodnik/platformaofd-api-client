@@ -6,6 +6,7 @@ namespace Platformaofd\ClientApi\Model;
 
 use Platformaofd\ClientApi\Model\Trait\Date\ReceiptDate;
 use Platformaofd\ClientApi\Model\Trait\Date\RqDate;
+use Platformaofd\ClientApi\Model\Trait\Modifiers;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds0;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds10;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds1199;
@@ -21,7 +22,8 @@ use Platformaofd\ClientApi\Model\Trait\User\UserInn;
 
 class Receipt
 {
-    use Nds0,
+    use Modifiers,
+        Nds0,
         Nds10,
         Nds1199,
         Nds18,
@@ -43,8 +45,6 @@ class Receipt
     private string $kktName;
 
     private string $kktRegId;
-
-    private array $modifiers;
 
     private int $shiftNumber;
 
@@ -148,18 +148,6 @@ class Receipt
     public function setKktRegId(string $kktRegId): self
     {
         $this->kktRegId = $kktRegId;
-
-        return $this;
-    }
-
-    public function getModifiers(): array
-    {
-        return $this->modifiers;
-    }
-
-    public function setModifiers(array $modifiers): self
-    {
-        $this->modifiers = $modifiers;
 
         return $this;
     }

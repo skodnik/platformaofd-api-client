@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Platformaofd\ClientApi\Model;
 
+use Platformaofd\ClientApi\Model\Trait\Modifiers;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds0;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds10;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds1199;
@@ -18,7 +19,18 @@ use Platformaofd\ClientApi\Model\Trait\Nds\NdsNo;
 
 class Item
 {
-    use Nds0, Nds10, Nds1199, Nds18, Nds5, Nds7, NdsCalculated10, NdsCalculated18, NdsCalculated5, NdsCalculated7, NdsNo;
+    use Modifiers,
+        Nds0,
+        Nds10,
+        Nds1199,
+        Nds18,
+        Nds5,
+        Nds7,
+        NdsCalculated10,
+        NdsCalculated18,
+        NdsCalculated5,
+        NdsCalculated7,
+        NdsNo;
 
     private string $name;
 
@@ -27,11 +39,6 @@ class Item
     private int $price;
 
     private int $quantity;
-
-    /**
-     * @deprecated
-     */
-    private array $modifiers;
 
     private int $sum;
 
@@ -95,18 +102,6 @@ class Item
     public function setQuantity(int $quantity): self
     {
         $this->quantity = $quantity;
-
-        return $this;
-    }
-
-    public function getModifiers(): array
-    {
-        return $this->modifiers;
-    }
-
-    public function setModifiers(array $modifiers): self
-    {
-        $this->modifiers = $modifiers;
 
         return $this;
     }
