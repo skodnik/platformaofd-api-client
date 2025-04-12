@@ -6,14 +6,13 @@ namespace Platformaofd\ClientApi\Model;
 
 use Platformaofd\ClientApi\Model\Trait\Date\ReceiptDate;
 use Platformaofd\ClientApi\Model\Trait\Date\RqDate;
+use Platformaofd\ClientApi\Model\Trait\User\UserInn;
 
 class Receipt
 {
-    use ReceiptDate, RqDate;
+    use ReceiptDate, RqDate, UserInn;
 
     private string $user;
-
-    private string $userInn;
 
     private int $rqId;
 
@@ -93,18 +92,6 @@ class Receipt
     public function setUser(string $user): self
     {
         $this->user = $user;
-
-        return $this;
-    }
-
-    public function getUserInn(): string
-    {
-        return $this->userInn;
-    }
-
-    public function setUserInn(string $userInn): self
-    {
-        $this->userInn = $userInn;
 
         return $this;
     }

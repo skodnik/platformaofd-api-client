@@ -17,6 +17,7 @@ use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated18;
 use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated5;
 use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated7;
 use Platformaofd\ClientApi\Model\Trait\Nds\NdsNo;
+use Platformaofd\ClientApi\Model\Trait\User\UserInn;
 
 class Document
 {
@@ -32,7 +33,8 @@ class Document
         NdsCalculated7,
         NdsNo,
         ReqDocDate,
-        RqDate;
+        RqDate,
+        UserInn;
 
     private ?int $dateTime;
 
@@ -59,8 +61,6 @@ class Document
     private string $documentLink;
 
     private string $taxationType;
-
-    private string $userInn;
 
     private string $kktRegId;
 
@@ -230,18 +230,6 @@ class Document
     public function setTaxationType(string $taxationType): self
     {
         $this->taxationType = $taxationType;
-
-        return $this;
-    }
-
-    public function getUserInn(): string
-    {
-        return $this->userInn;
-    }
-
-    public function setUserInn(string $userInn): self
-    {
-        $this->userInn = $userInn;
 
         return $this;
     }
