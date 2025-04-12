@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Platformaofd\ClientApi\Model;
 
+use DateTimeImmutable;
 use Platformaofd\ClientApi\Model\Trait\Kkt\KktFn;
 use Platformaofd\ClientApi\Model\Trait\Kkt\KktName;
 use Platformaofd\ClientApi\Model\Trait\Kkt\KktNumber;
@@ -17,27 +18,27 @@ class Kkt
 
     private int $kktCheckStatus;
 
-    private \DateTimeImmutable $kktRegDate;
+    private DateTimeImmutable $kktRegDate;
 
-    private \DateTimeImmutable $kktCheckFNSDate;
+    private DateTimeImmutable $kktCheckFNSDate;
 
     private string $kktCheckState;
 
     private int $kktStatus;
 
-    private \DateTimeImmutable $kktLastCheckStatusDate;
+    private DateTimeImmutable $kktLastCheckStatusDate;
 
     private string $retailAddress;
 
-    private \DateTimeImmutable $kktLastSubscriptionDateTill;
+    private DateTimeImmutable $kktLastSubscriptionDateTill;
 
-    private \DateTimeImmutable $kktCurrentSubscriptionDateTill;
+    private DateTimeImmutable $kktCurrentSubscriptionDateTill;
 
-    private \DateTimeImmutable $kktFnInstallDate;
+    private DateTimeImmutable $kktFnInstallDate;
 
-    private \DateTimeImmutable $kktFnDateTill;
+    private DateTimeImmutable $kktFnDateTill;
 
-    private \DateTimeImmutable $kktFnDateTillForecast;
+    private DateTimeImmutable $kktFnDateTillForecast;
 
     private int $kktFnSpaceUsed;
 
@@ -65,24 +66,24 @@ class Kkt
         return $this;
     }
 
-    public function getKktRegDate(): \DateTimeImmutable
+    public function getKktRegDate(): DateTimeImmutable
     {
         return $this->kktRegDate;
     }
 
-    public function setKktRegDate(\DateTimeImmutable $kktRegDate): self
+    public function setKktRegDate(DateTimeImmutable $kktRegDate): self
     {
         $this->kktRegDate = $kktRegDate;
 
         return $this;
     }
 
-    public function getKktCheckFNSDate(): \DateTimeImmutable
+    public function getKktCheckFNSDate(): DateTimeImmutable
     {
         return $this->kktCheckFNSDate;
     }
 
-    public function setKktCheckFNSDate(\DateTimeImmutable $kktCheckFNSDate): self
+    public function setKktCheckFNSDate(DateTimeImmutable $kktCheckFNSDate): self
     {
         $this->kktCheckFNSDate = $kktCheckFNSDate;
 
@@ -113,12 +114,12 @@ class Kkt
         return $this;
     }
 
-    public function getKktLastCheckStatusDate(): \DateTimeImmutable
+    public function getKktLastCheckStatusDate(): DateTimeImmutable
     {
         return $this->kktLastCheckStatusDate;
     }
 
-    public function setKktLastCheckStatusDate(\DateTimeImmutable $kktLastCheckStatusDate): self
+    public function setKktLastCheckStatusDate(DateTimeImmutable $kktLastCheckStatusDate): self
     {
         $this->kktLastCheckStatusDate = $kktLastCheckStatusDate;
 
@@ -137,60 +138,60 @@ class Kkt
         return $this;
     }
 
-    public function getKktLastSubscriptionDateTill(): \DateTimeImmutable
+    public function getKktLastSubscriptionDateTill(): DateTimeImmutable
     {
         return $this->kktLastSubscriptionDateTill;
     }
 
-    public function setKktLastSubscriptionDateTill(\DateTimeImmutable $kktLastSubscriptionDateTill): self
+    public function setKktLastSubscriptionDateTill(DateTimeImmutable $kktLastSubscriptionDateTill): self
     {
         $this->kktLastSubscriptionDateTill = $kktLastSubscriptionDateTill;
 
         return $this;
     }
 
-    public function getKktCurrentSubscriptionDateTill(): \DateTimeImmutable
+    public function getKktCurrentSubscriptionDateTill(): DateTimeImmutable
     {
         return $this->kktCurrentSubscriptionDateTill;
     }
 
-    public function setKktCurrentSubscriptionDateTill(\DateTimeImmutable $kktCurrentSubscriptionDateTill): self
+    public function setKktCurrentSubscriptionDateTill(DateTimeImmutable $kktCurrentSubscriptionDateTill): self
     {
         $this->kktCurrentSubscriptionDateTill = $kktCurrentSubscriptionDateTill;
 
         return $this;
     }
 
-    public function getKktFnInstallDate(): \DateTimeImmutable
+    public function getKktFnInstallDate(): DateTimeImmutable
     {
         return $this->kktFnInstallDate;
     }
 
-    public function setKktFnInstallDate(\DateTimeImmutable $kktFnInstallDate): self
+    public function setKktFnInstallDate(DateTimeImmutable $kktFnInstallDate): self
     {
         $this->kktFnInstallDate = $kktFnInstallDate;
 
         return $this;
     }
 
-    public function getKktFnDateTill(): \DateTimeImmutable
+    public function getKktFnDateTill(): DateTimeImmutable
     {
         return $this->kktFnDateTill;
     }
 
-    public function setKktFnDateTill(\DateTimeImmutable $kktFnDateTill): self
+    public function setKktFnDateTill(DateTimeImmutable $kktFnDateTill): self
     {
         $this->kktFnDateTill = $kktFnDateTill;
 
         return $this;
     }
 
-    public function getKktFnDateTillForecast(): \DateTimeImmutable
+    public function getKktFnDateTillForecast(): DateTimeImmutable
     {
         return $this->kktFnDateTillForecast;
     }
 
-    public function setKktFnDateTillForecast(\DateTimeImmutable $kktFnDateTillForecast): self
+    public function setKktFnDateTillForecast(DateTimeImmutable $kktFnDateTillForecast): self
     {
         $this->kktFnDateTillForecast = $kktFnDateTillForecast;
 
