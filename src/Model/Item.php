@@ -10,17 +10,15 @@ use Platformaofd\ClientApi\Model\Trait\Nds\Nds1199;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds18;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds5;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds7;
+use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated10;
+use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated18;
+use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated5;
+use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated7;
 use Platformaofd\ClientApi\Model\Trait\Nds\NdsNo;
 
 class Item
 {
-    use Nds0;
-    use Nds10;
-    use Nds1199;
-    use Nds18;
-    use Nds5;
-    use Nds7;
-    use NdsNo;
+    use Nds0, Nds10, Nds1199, Nds18, Nds5, Nds7, NdsCalculated10, NdsCalculated18, NdsCalculated5, NdsCalculated7, NdsNo;
 
     private string $name;
 
@@ -34,14 +32,6 @@ class Item
      * @deprecated
      */
     private array $modifiers;
-
-    private int $ndsCalculated5;
-
-    private int $ndsCalculated7;
-
-    private int $ndsCalculated10;
-
-    private int $ndsCalculated18;
 
     private int $sum;
 
@@ -117,54 +107,6 @@ class Item
     public function setModifiers(array $modifiers): self
     {
         $this->modifiers = $modifiers;
-
-        return $this;
-    }
-
-    public function getNdsCalculated5(): int
-    {
-        return $this->ndsCalculated5;
-    }
-
-    public function setNdsCalculated5(int $ndsCalculated5): self
-    {
-        $this->ndsCalculated5 = $ndsCalculated5;
-
-        return $this;
-    }
-
-    public function getNdsCalculated7(): int
-    {
-        return $this->ndsCalculated7;
-    }
-
-    public function setNdsCalculated7(int $ndsCalculated7): self
-    {
-        $this->ndsCalculated7 = $ndsCalculated7;
-
-        return $this;
-    }
-
-    public function getNdsCalculated10(): int
-    {
-        return $this->ndsCalculated10;
-    }
-
-    public function setNdsCalculated10(int $ndsCalculated10): self
-    {
-        $this->ndsCalculated10 = $ndsCalculated10;
-
-        return $this;
-    }
-
-    public function getNdsCalculated18(): int
-    {
-        return $this->ndsCalculated18;
-    }
-
-    public function setNdsCalculated18(int $ndsCalculated18): self
-    {
-        $this->ndsCalculated18 = $ndsCalculated18;
 
         return $this;
     }
