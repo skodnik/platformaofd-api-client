@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace Platformaofd\ClientApi\Model;
 
-use DateTimeImmutable;
+use Platformaofd\ClientApi\Model\Trait\Date\ReqDocDate;
+use Platformaofd\ClientApi\Model\Trait\Date\RqDate;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds0;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds10;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds1199;
@@ -16,12 +17,22 @@ use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated18;
 use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated5;
 use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated7;
 use Platformaofd\ClientApi\Model\Trait\Nds\NdsNo;
-use Symfony\Component\Serializer\Annotation\Context;
-use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 
 class Document
 {
-    use Nds0, Nds10, Nds1199, Nds18, Nds5, Nds7, NdsCalculated10, NdsCalculated18, NdsCalculated5, NdsCalculated7, NdsNo;
+    use Nds0,
+        Nds10,
+        Nds1199,
+        Nds18,
+        Nds5,
+        Nds7,
+        NdsCalculated10,
+        NdsCalculated18,
+        NdsCalculated5,
+        NdsCalculated7,
+        NdsNo,
+        ReqDocDate,
+        RqDate;
 
     private ?int $dateTime;
 
@@ -49,16 +60,11 @@ class Document
 
     private string $taxationType;
 
-    private int $ndsNo;
-
     private string $userInn;
 
     private string $kktRegId;
 
     private string $userName;
-
-    #[Context([DateTimeNormalizer::FORMAT_KEY => 'Y.m.d H:i:s.v'])]
-    private DateTimeImmutable $rqDate;
 
     private int $cashTotalSum;
 
@@ -69,9 +75,6 @@ class Document
     private string $fnSn;
 
     private int $fdFormatVer;
-
-    #[Context([DateTimeNormalizer::FORMAT_KEY => 'Y.m.d H:i:s.v'])]
-    private DateTimeImmutable $reqDocDate;
 
     private string $operationType;
 
@@ -231,18 +234,6 @@ class Document
         return $this;
     }
 
-    public function getNdsNo(): int
-    {
-        return $this->ndsNo;
-    }
-
-    public function setNdsNo(int $ndsNo): self
-    {
-        $this->ndsNo = $ndsNo;
-
-        return $this;
-    }
-
     public function getUserInn(): string
     {
         return $this->userInn;
@@ -275,18 +266,6 @@ class Document
     public function setUserName(string $userName): self
     {
         $this->userName = $userName;
-
-        return $this;
-    }
-
-    public function getRqDate(): DateTimeImmutable
-    {
-        return $this->rqDate;
-    }
-
-    public function setRqDate(string $rqDate): self
-    {
-        $this->rqDate = DateTimeImmutable::createFromFormat('Y.m.d H:i:s.v', $rqDate);
 
         return $this;
     }
@@ -347,18 +326,6 @@ class Document
     public function setFdFormatVer(int $fdFormatVer): self
     {
         $this->fdFormatVer = $fdFormatVer;
-
-        return $this;
-    }
-
-    public function getReqDocDate(): DateTimeImmutable
-    {
-        return $this->reqDocDate;
-    }
-
-    public function setReqDocDate(string $reqDocDate): self
-    {
-        $this->reqDocDate = DateTimeImmutable::createFromFormat('Y.m.d H:i:s.v', $reqDocDate);
 
         return $this;
     }

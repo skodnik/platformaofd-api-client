@@ -5,19 +5,19 @@ declare(strict_types=1);
 namespace Platformaofd\ClientApi\Model;
 
 use DateTimeImmutable;
+use Platformaofd\ClientApi\Model\Trait\Date\RqDate;
 use Symfony\Component\Serializer\Annotation\Context;
 use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 
 class Receipt
 {
+    use RqDate;
+
     private string $user;
 
     private string $userInn;
 
     private int $rqId;
-
-    #[Context([DateTimeNormalizer::FORMAT_KEY => 'Y.m.d H:i:s.v'])]
-    private DateTimeImmutable $rqDate;
 
     private string $kktName;
 
@@ -122,18 +122,6 @@ class Receipt
     public function setRqId(int $rqId): self
     {
         $this->rqId = $rqId;
-
-        return $this;
-    }
-
-    public function getRqDate(): DateTimeImmutable
-    {
-        return $this->rqDate;
-    }
-
-    public function setRqDate(DateTimeImmutable $rqDate): self
-    {
-        $this->rqDate = $rqDate;
 
         return $this;
     }
