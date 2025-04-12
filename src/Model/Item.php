@@ -4,10 +4,24 @@ declare(strict_types=1);
 
 namespace Platformaofd\ClientApi\Model;
 
-use Symfony\Component\Serializer\Attribute\SerializedName;
+use Platformaofd\ClientApi\Model\Trait\Nds\Nds0;
+use Platformaofd\ClientApi\Model\Trait\Nds\Nds10;
+use Platformaofd\ClientApi\Model\Trait\Nds\Nds1199;
+use Platformaofd\ClientApi\Model\Trait\Nds\Nds18;
+use Platformaofd\ClientApi\Model\Trait\Nds\Nds5;
+use Platformaofd\ClientApi\Model\Trait\Nds\Nds7;
+use Platformaofd\ClientApi\Model\Trait\Nds\NdsNo;
 
 class Item
 {
+    use Nds0;
+    use Nds10;
+    use Nds1199;
+    use Nds18;
+    use Nds5;
+    use Nds7;
+    use NdsNo;
+
     private string $name;
 
     private string $barcode;
@@ -20,21 +34,6 @@ class Item
      * @deprecated
      */
     private array $modifiers;
-
-    private int $ndsNo;
-
-    private int $nds0;
-
-    private int $nds10;
-
-    private int $nds18;
-
-    #[SerializedName('nds_1199')]
-    private int $nds1199;
-
-    private int $nds5;
-
-    private int $nds7;
 
     private int $ndsCalculated5;
 
@@ -118,90 +117,6 @@ class Item
     public function setModifiers(array $modifiers): self
     {
         $this->modifiers = $modifiers;
-
-        return $this;
-    }
-
-    public function getNdsNo(): int
-    {
-        return $this->ndsNo;
-    }
-
-    public function setNdsNo(int $ndsNo): self
-    {
-        $this->ndsNo = $ndsNo;
-
-        return $this;
-    }
-
-    public function getNds0(): int
-    {
-        return $this->nds0;
-    }
-
-    public function setNds0(int $nds0): self
-    {
-        $this->nds0 = $nds0;
-
-        return $this;
-    }
-
-    public function getNds10(): int
-    {
-        return $this->nds10;
-    }
-
-    public function setNds10(int $nds10): self
-    {
-        $this->nds10 = $nds10;
-
-        return $this;
-    }
-
-    public function getNds18(): int
-    {
-        return $this->nds18;
-    }
-
-    public function setNds18(int $nds18): self
-    {
-        $this->nds18 = $nds18;
-
-        return $this;
-    }
-
-    public function getNds1199(): int
-    {
-        return $this->nds1199;
-    }
-
-    public function setNds1199(int $nds1199): self
-    {
-        $this->nds1199 = $nds1199;
-
-        return $this;
-    }
-
-    public function getNds5(): int
-    {
-        return $this->nds5;
-    }
-
-    public function setNds5(int $nds5): self
-    {
-        $this->nds5 = $nds5;
-
-        return $this;
-    }
-
-    public function getNds7(): int
-    {
-        return $this->nds7;
-    }
-
-    public function setNds7(int $nds7): self
-    {
-        $this->nds7 = $nds7;
 
         return $this;
     }
