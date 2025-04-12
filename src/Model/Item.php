@@ -8,15 +8,18 @@ use Symfony\Component\Serializer\Attribute\SerializedName;
 
 class Item
 {
-    private array $modifiers;
-
     private string $name;
-
-    private int $quantity;
 
     private string $barcode;
 
     private int $price;
+
+    private int $quantity;
+
+    /**
+     * @deprecated
+     */
+    private array $modifiers;
 
     private int $ndsNo;
 
@@ -25,6 +28,9 @@ class Item
     private int $nds10;
 
     private int $nds18;
+
+    #[SerializedName('nds_1199')]
+    private int $nds1199;
 
     private int $nds5;
 
@@ -38,28 +44,23 @@ class Item
 
     private int $ndsCalculated18;
 
-    #[SerializedName('nds_1199')]
-    private int $nds1199;
-
     private int $sum;
 
     private int $productType;
 
+    private int $productCode;
+
     private int $paymentType;
 
+    private string $providerName;
+
+    private string $providerInn;
+
+    private int $commodityCodeTag;
+
+    private int $productCodeCheckResult;
+
     private string $propData;
-
-    public function getModifiers(): array
-    {
-        return $this->modifiers;
-    }
-
-    public function setModifiers(array $modifiers): self
-    {
-        $this->modifiers = $modifiers;
-
-        return $this;
-    }
 
     public function getName(): string
     {
@@ -69,18 +70,6 @@ class Item
     public function setName(string $name): self
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    public function getQuantity(): int
-    {
-        return $this->quantity;
-    }
-
-    public function setQuantity(int $quantity): self
-    {
-        $this->quantity = $quantity;
 
         return $this;
     }
@@ -105,6 +94,30 @@ class Item
     public function setPrice(int $price): self
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    public function getQuantity(): int
+    {
+        return $this->quantity;
+    }
+
+    public function setQuantity(int $quantity): self
+    {
+        $this->quantity = $quantity;
+
+        return $this;
+    }
+
+    public function getModifiers(): array
+    {
+        return $this->modifiers;
+    }
+
+    public function setModifiers(array $modifiers): self
+    {
+        $this->modifiers = $modifiers;
 
         return $this;
     }
@@ -153,6 +166,18 @@ class Item
     public function setNds18(int $nds18): self
     {
         $this->nds18 = $nds18;
+
+        return $this;
+    }
+
+    public function getNds1199(): int
+    {
+        return $this->nds1199;
+    }
+
+    public function setNds1199(int $nds1199): self
+    {
+        $this->nds1199 = $nds1199;
 
         return $this;
     }
@@ -229,18 +254,6 @@ class Item
         return $this;
     }
 
-    public function getNds1199(): int
-    {
-        return $this->nds1199;
-    }
-
-    public function setNds1199(int $nds1199): self
-    {
-        $this->nds1199 = $nds1199;
-
-        return $this;
-    }
-
     public function getSum(): int
     {
         return $this->sum;
@@ -265,6 +278,18 @@ class Item
         return $this;
     }
 
+    public function getProductCode(): int
+    {
+        return $this->productCode;
+    }
+
+    public function setProductCode(int $productCode): self
+    {
+        $this->productCode = $productCode;
+
+        return $this;
+    }
+
     public function getPaymentType(): int
     {
         return $this->paymentType;
@@ -273,6 +298,54 @@ class Item
     public function setPaymentType(int $paymentType): self
     {
         $this->paymentType = $paymentType;
+
+        return $this;
+    }
+
+    public function getProviderName(): string
+    {
+        return $this->providerName;
+    }
+
+    public function setProviderName(string $providerName): self
+    {
+        $this->providerName = $providerName;
+
+        return $this;
+    }
+
+    public function getProviderInn(): string
+    {
+        return $this->providerInn;
+    }
+
+    public function setProviderInn(string $providerInn): self
+    {
+        $this->providerInn = $providerInn;
+
+        return $this;
+    }
+
+    public function getCommodityCodeTag(): int
+    {
+        return $this->commodityCodeTag;
+    }
+
+    public function setCommodityCodeTag(int $commodityCodeTag): self
+    {
+        $this->commodityCodeTag = $commodityCodeTag;
+
+        return $this;
+    }
+
+    public function getProductCodeCheckResult(): int
+    {
+        return $this->productCodeCheckResult;
+    }
+
+    public function setProductCodeCheckResult(int $productCodeCheckResult): self
+    {
+        $this->productCodeCheckResult = $productCodeCheckResult;
 
         return $this;
     }
