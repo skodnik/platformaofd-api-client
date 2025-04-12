@@ -1,0 +1,22 @@
+{
+    "dateTime": 0,
+    "operationTypeId": 0,
+    "userInn": "9715260691",
+    "kktRegId": "1234567890123456",
+    "shiftNumber": 50,
+    "userName": "ООО \"Эвотор ОФД\"",
+    "rqDate": "2017.06.07 15:13:31.000",
+    "operator": "Кассир Никонова Нинель Николаевна",
+    "rqId": 731816625,
+    "taxationTypeId": 0,
+    "fnsGate": 0,
+    "docTypeName": "Отчёт о закрытии смены\r\n",
+    "requestNumber": 0,
+    "fnSn": "9876543210123456",
+    "fdFormatVer": 0,
+    "docTypeId": 5,
+    "reqDocDate": "2017.06.06 15:12:00.000",
+    "docFp": "1234567890",
+    "fiscalDocumentNumber": 1000,
+    "documentLink": "https://lk.platformaofd.ru/web/noauth/cheque/id?id=55555555555&date=1620550800000&fp=2000000000"
+}
