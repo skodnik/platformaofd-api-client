@@ -18,6 +18,7 @@ use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated18;
 use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated5;
 use Platformaofd\ClientApi\Model\Trait\Nds\NdsCalculated7;
 use Platformaofd\ClientApi\Model\Trait\Nds\NdsNo;
+use Platformaofd\ClientApi\Model\Trait\RqId;
 use Platformaofd\ClientApi\Model\Trait\User\UserInn;
 
 class Receipt
@@ -36,11 +37,10 @@ class Receipt
         NdsNo,
         ReceiptDate,
         RqDate,
+        RqId,
         UserInn;
 
     private string $user;
-
-    private int $rqId;
 
     private string $kktName;
 
@@ -112,18 +112,6 @@ class Receipt
     public function setUser(string $user): self
     {
         $this->user = $user;
-
-        return $this;
-    }
-
-    public function getRqId(): int
-    {
-        return $this->rqId;
-    }
-
-    public function setRqId(int $rqId): self
-    {
-        $this->rqId = $rqId;
 
         return $this;
     }
