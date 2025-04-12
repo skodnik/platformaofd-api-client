@@ -7,6 +7,7 @@ namespace Platformaofd\ClientApi\Model;
 use Platformaofd\ClientApi\Model\Trait\CashTotalSum;
 use Platformaofd\ClientApi\Model\Trait\Date\ReceiptDate;
 use Platformaofd\ClientApi\Model\Trait\Date\RqDate;
+use Platformaofd\ClientApi\Model\Trait\DocumentLink;
 use Platformaofd\ClientApi\Model\Trait\Kkt\KktName;
 use Platformaofd\ClientApi\Model\Trait\Kkt\KktRegId;
 use Platformaofd\ClientApi\Model\Trait\Modifiers;
@@ -29,6 +30,7 @@ use Platformaofd\ClientApi\Model\Trait\User\UserInn;
 class Receipt
 {
     use CashTotalSum,
+        DocumentLink,
         KktName,
         KktRegId,
         Modifiers,
@@ -104,8 +106,6 @@ class Receipt
      * @var Property[]
      */
     private ?array $properties = null;
-
-    private string $documentLink;
 
     public function getUser(): string
     {
@@ -379,18 +379,6 @@ class Receipt
     public function setProperties(array $properties): self
     {
         $this->properties = $properties;
-
-        return $this;
-    }
-
-    public function getDocumentLink(): string
-    {
-        return $this->documentLink;
-    }
-
-    public function setDocumentLink(string $documentLink): self
-    {
-        $this->documentLink = $documentLink;
 
         return $this;
     }

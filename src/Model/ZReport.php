@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Platformaofd\ClientApi\Model;
 
+use Platformaofd\ClientApi\Model\Trait\DocumentLink;
 use Platformaofd\ClientApi\Model\Trait\Kkt\KktFn;
 use Platformaofd\ClientApi\Model\Trait\Kkt\KktName;
 use Platformaofd\ClientApi\Model\Trait\Kkt\KktNumber;
@@ -14,7 +15,7 @@ use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 
 class ZReport
 {
-    use KktFn, KktName, KktNumber, KktRegNumber, ShiftNumber;
+    use DocumentLink, KktFn, KktName, KktNumber, KktRegNumber, ShiftNumber;
 
     private int $expenseCount;
 
@@ -33,8 +34,6 @@ class ZReport
     private int $refundIncomeCashSumm;
 
     private int $expenseElectroSumm;
-
-    private string $documentLink;
 
     private int $incomePrepaidSumm;
 
@@ -186,18 +185,6 @@ class ZReport
     public function setExpenseElectroSumm(int $expenseElectroSumm): self
     {
         $this->expenseElectroSumm = $expenseElectroSumm;
-
-        return $this;
-    }
-
-    public function getDocumentLink(): string
-    {
-        return $this->documentLink;
-    }
-
-    public function setDocumentLink(string $documentLink): self
-    {
-        $this->documentLink = $documentLink;
 
         return $this;
     }

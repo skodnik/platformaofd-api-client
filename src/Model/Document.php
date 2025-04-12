@@ -7,6 +7,7 @@ namespace Platformaofd\ClientApi\Model;
 use Platformaofd\ClientApi\Model\Trait\CashTotalSum;
 use Platformaofd\ClientApi\Model\Trait\Date\ReqDocDate;
 use Platformaofd\ClientApi\Model\Trait\Date\RqDate;
+use Platformaofd\ClientApi\Model\Trait\DocumentLink;
 use Platformaofd\ClientApi\Model\Trait\Kkt\KktRegId;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds0;
 use Platformaofd\ClientApi\Model\Trait\Nds\Nds10;
@@ -27,6 +28,7 @@ use Platformaofd\ClientApi\Model\Trait\User\UserInn;
 class Document
 {
     use CashTotalSum,
+        DocumentLink,
         KktRegId,
         Nds0,
         Nds10,
@@ -61,8 +63,6 @@ class Document
     private string $docFp;
 
     private int $fiscalDocumentNumber;
-
-    private string $documentLink;
 
     private string $taxationType;
 
@@ -170,18 +170,6 @@ class Document
     public function setFiscalDocumentNumber(int $fiscalDocumentNumber): self
     {
         $this->fiscalDocumentNumber = $fiscalDocumentNumber;
-
-        return $this;
-    }
-
-    public function getDocumentLink(): string
-    {
-        return $this->documentLink;
-    }
-
-    public function setDocumentLink(string $documentLink): self
-    {
-        $this->documentLink = $documentLink;
 
         return $this;
     }
